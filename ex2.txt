@@ -1,0 +1,73 @@
+// Ex. 2 página 22
+
+package Aresta;
+
+public class Fabrica {
+    public static Figura factoryMethod(ListaFigura figura){
+        if(figura.equals(ListaFigura.QUADRADO)){
+            return new Quadrado(4);
+        }else if(figura.equals(ListaFigura.TRIANGULO)){
+            return new Quadrado(3);
+        }
+        return null;
+
+    }
+    
+}
+
+package Aresta;
+
+public interface Figura {
+    public int getArestas();
+
+}
+
+package Aresta;
+
+public enum ListaFigura {
+    QUADRADO,TRIANGULO;
+}
+
+package Aresta;
+
+public class Quadrado implements Figura{
+    private int aresta;
+    
+    public Quadrado(int aresta) {
+        this.aresta = aresta;
+    }
+
+    @Override
+    public int getArestas() {
+        return 0;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "Quadrado [aresta=" + aresta + "]";
+    }
+    
+
+}
+
+package Aresta;
+
+public class Triangulo implements Figura {
+    private int aresta;
+    
+    public Triangulo(int aresta) {
+        this.aresta = aresta;
+    }
+
+    @Override
+    public int getArestas() {
+
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangulo [aresta=" + aresta + "]";
+    }
+    
